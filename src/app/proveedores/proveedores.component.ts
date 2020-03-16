@@ -24,6 +24,7 @@ export class ProveedoresComponent implements OnInit {
 
   addProveedor(): void{
     this.proveedores.push(this.model);
+    localStorage.setItem('proveedores', JSON.stringify(this.proveedores));
     this.msg = 'Proveedor agregado exitosamente';
   }
 

@@ -24,6 +24,7 @@ export class ProductsComponent implements OnInit {
 
   addProduct(): void{
     this.products.push(this.model);
+    localStorage.setItem('products', JSON.stringify(this.products));
     this.msg = 'Producto agregado exitosamente';
   }
 
